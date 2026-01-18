@@ -1,4 +1,4 @@
-# 通俗易懂地学习git中最常用的指令
+# 通俗易懂地学习Git中最常用的指令
 
 ## 一、概述
 
@@ -6,7 +6,7 @@
 
 这是本系列的第 2 篇文章，如果你还没看上一篇，推荐先阅读上一篇内容：
 
-- [git的简介与基本操作方法](./note-01.md)
+- [Git的简介与基本操作方法](note-01.md)
 
 git 的每个指令都有很多功能，这系列的文章我会介绍最常用的 git 指令和最基本的功能。如果你想深入了解某个指令，可以通过查阅git 的官方帮助，如下指令
 
@@ -27,7 +27,7 @@ git add --help
 
 初始化本地仓库前，我们先创建远端仓库。远端仓库我们可以使用 **github**，这是最知名的基于 git 的代码免费托管服务，缺点是国内访问可能比较慢。也可以用 **gitee**，这是国内的基于 git 的代码免费托管服务，特点是访问速度快、中文界面。我们以 **gitee**为例演示git的基本功能，gitee 的网址是 [https://gitee.com](https://gitee.com)，先创建个人账号，登录之后点击网址右上角的 “创建仓库”，即进入创建仓库界面，如下图
 
-![00](../img/note-01-0.png)
+![00](../assets/images/img/note-01-0.png)
 
 注意：
 
@@ -96,7 +96,7 @@ git status
 
 可以看到如下提示
 
-![img/note-01-1.png](../img/note-01-1.png)
+![img/note-01-1.png](../assets/images/img/note-01-1.png)
 
 以上截图包含的信息为：
 
@@ -114,7 +114,7 @@ touch main.cpp
 
 现在文件在工作区，使用 `git status` 命令查看 git 状态，可以看到一个关键词 `Untracked files`，也就是没有被 git 监控的文件，这里所说的监控就是跟踪文件的变化，如下图
 
-![img/note-01-2.png](../img/note-01-2.png)
+![img/note-01-2.png](../assets/images/img/note-01-2.png)
 
 将文件添加到 git 缓存区后，项目里的文件将会被 git 监控，使用以下命令将 `main.cpp` 文件添加到 git 缓存区
 
@@ -123,7 +123,7 @@ git add main.cpp
 ```
 
 此时再使用 `git status`可以看到如下图
-![img/note-01-3.png](../img/note-01-3.png)
+![img/note-01-3.png](../assets/images/img/note-01-3.png)
 
 可以看到 `Changes to be committed`关键词，代表已经在 git 缓存区的文件。
 
@@ -144,7 +144,7 @@ git commit -m "first commit"
 ```
 
 此时我们看到终端的一些提示信息，包含文件变动的一些基本信息，如下图
-![img/note-01-4.png](../img/note-01-4.png)
+![img/note-01-4.png](../assets/images/img/note-01-4.png)
 
 每次提交的变更内容，都会被 git 记录下来，我们可以使用以下命令查看 git 提交记录
 
@@ -153,7 +153,7 @@ git log
 ```
 
 此时我们可以看到如下图信息
-![img/note-01-5.png](../img/note-01-5.png)
+![img/note-01-5.png](../assets/images/img/note-01-5.png)
 
 **第一行**：本次提交的基本信息。第 2 列表示 git 提交的唯一标识（我们可以叫做提交id、commit id，或者版本id）；第 3 列表示当前分支是 `master`分支
 
@@ -201,7 +201,7 @@ int main(){
 
 通过`git diff`命令查看工作区与缓存区的文件差异，如下图
 
-![img/note-01-6.png](../img/note-01-6.png)
+![img/note-01-6.png](../assets/images/img/note-01-6.png)
 
 有两个关键词 `a` 和 `b`，分别指的是缓存区和工作区，可以看出在`b`中的`main.cpp`文件多了 6 行代码
 

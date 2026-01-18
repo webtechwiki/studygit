@@ -1,11 +1,11 @@
-# 怎样使用git进行协同开发？
+# 怎样使用Git进行协同开发？
 
 ## 一、概述
 
 > 这篇文章是本系列的第 3 篇。通过前两篇，我们已经掌握了 git 的最常用的命令以及相关操作。在本篇文章，我们将学习企业开发中最常用的协同方式，那就是基于 git 分支进行协同开发。如果你还没有阅读过前两篇文章，建议先阅读。
 
-- [git的简介与基本操作方法](../note-01.md)
-- [通俗易懂地学习git中最常用的指令](./note-02.md)
+- [Git的简介与基本操作方法](note-01.md)
+- [通俗易懂地学习Git中最常用的指令](note-02.md)
 
 ## 二、git 分支
 
@@ -18,7 +18,7 @@ git 的 `master` 分支并不是一个特殊分支。 跟其它分支完全没�
 
 不同的开发团队的分支管理规范不一样，但基本原理是相同的。下面是一个典型的 git 分支的工作流示例图
 
-![note-02-1.png](../img/note-02-1.png)
+![note-02-1.png](../assets/images/img/note-02-1.png)
 
 **Master**：这里指 `master` 主分支，`master` 分支记录的重大版本更新
 
@@ -37,7 +37,7 @@ git branch
 ```
 
 看到如下信息
-![note-02-2.png](../img/note-02-2.png)
+![note-02-2.png](../assets/images/img/note-02-2.png)
 
 **（2）创建与切换分支**
 
@@ -58,7 +58,7 @@ git checkout -b develop
 ```
 
 此时我们再使用 `git branch` 查看分支信息，如下图
-![note-02-2-1.png](../img/note-02-2-1.png)
+![note-02-2-1.png](../assets/images/img/note-02-2-1.png)
 
 可以看到现在一共有两个分支，而有“\*”标识的是我们现在所在的分支。
 
@@ -145,7 +145,7 @@ git pull origin master:develop
 
 通常情况下，需要单独建一个分支来开发功能，开发完成之后需要合并到主分支。我们这里说的主分支是功能分支的来源分支，假如 `feature` 分支是从 `develop` 分支创建的，我们就把这里的 `develop` 分支叫做主分支。通过下图可以看到合并的过程
 
-![note-02-3.png](../img/note-02-3.png)
+![note-02-3.png](../assets/images/img/note-02-3.png)
 
 每个节点代表一个提交，但功能分支在开发的时候，主分支也可能进行了好几次提交。最后，功能分支要合并到主分支上。上图的合并过程可以通过以下命令来实现
 
@@ -157,7 +157,7 @@ git merge feature
 ```
 
 但很多时候，我们需要另外的效果，如下图
-![note-02-4.png](../img/note-02-4.png)
+![note-02-4.png](../assets/images/img/note-02-4.png)
 
 将功能分支的提交记录追加在主分支上，让git保持一条线的提交记录，我们可以使用以下命令
 
@@ -267,7 +267,7 @@ git merge develop
 
 合并结果如下图所示
 
-![note-02-5.png](../img/note-02-5.png)
+![note-02-5.png](../assets/images/img/note-02-5.png)
 
 可以看到提示信息的关键词`CONFLICT`，此时代码已经产生了 git 无法自动解决的冲突，合并之后的代码如下所示
 

@@ -1,0 +1,118 @@
+site_name: Git 实战教程 - 从入门到团队协作
+site_description: 零基础学Git！通过实际案例掌握版本控制核心技能。涵盖日常开发、团队协作、代码回退等实用技巧，快速上手Git！
+site_author: 极客开发者
+site_url: https://studygit.webtech.wiki/
+
+# Repository
+repo_name: webtechwiki/studygit
+repo_url: https://github.com/webtechwiki/studygit
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; webtech.wiki
+
+# Configuration
+theme:
+  name: material
+  language: zh
+  favicon: assets/images/favicon.ico
+  logo: assets/images/favicon.ico
+  
+  # Color scheme
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+  # Features
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - content.action.edit
+    - content.action.view
+
+# Plugins
+plugins:
+  - search:
+      lang: zh
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: webtechwiki
+      repo: git
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+  - 🏠 首页: index.md
+  - 📚 Git 实战教程:
+    - 🚀 Git基础入门 - 简介与核心操作: git/note-01.md
+    - ⚡ 实用技能 - 最常用的Git指令详解: git/note-02.md
+    - 👥 团队协作 - Git分支管理与协同开发: git/note-03.md
+    - 🔄 问题解决 - 版本回退与代码恢复: git/note-04.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/webtechwiki/git
+  analytics:
+    provider: google
+    property: G-10H40HDVQE
+
+# Extra CSS
+extra_css:
+  - assets/stylesheets/extra.css
